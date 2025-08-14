@@ -1,0 +1,22 @@
+[package]
+name = "governance"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "governance"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+# --- ADD THIS SECTION ---
+idl-build = ["anchor-lang/idl-build"] 
+
+[dependencies]
+anchor-lang = "0.31.1"
+on_chain = { path = "../on-chain", features = ["cpi"] }
