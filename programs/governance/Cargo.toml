@@ -9,14 +9,13 @@ crate-type = ["cdylib", "lib"]
 name = "governance"
 
 [features]
+default = []
+cpi = ["no-entrypoint"]
 no-entrypoint = []
 no-idl = []
 no-log-ix-name = []
-cpi = ["no-entrypoint"]
-default = []
-# --- ADD THIS SECTION ---
-idl-build = ["anchor-lang/idl-build"] 
+idl-build = ["anchor-lang/idl-build"]
 
 [dependencies]
 anchor-lang = "0.31.1"
-on_chain = { path = "../on-chain", features = ["cpi"] }
+on_chain = { path = "../on_chain", features = ["cpi"] }

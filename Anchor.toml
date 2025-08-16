@@ -6,8 +6,8 @@ resolution = true
 skip-lint = false
 
 [programs.localnet]
-on_chain = "6hPPwfMV5yMR6pCvg1kt2JaAT5FSRjnefuYQ74s62XLL"
-governance = "HbD9TyCRmTboM3QuL2h227hEhzKBfL3CTgqtohtGKP92"
+governance = "98uoSUVCBHRE6tJLrBozwnMCCnZbCYHmK9v5RTtY5dPv"
+on_chain = "GJZsW2fuEFx7M83G7JNE6skGskJmK5KNe62ygoywJ6P4"
 
 
 [registry]
@@ -16,6 +16,8 @@ url = "https://api.apr.dev"
 [provider]
 cluster = "localnet"
 wallet = "~/.config/solana/id.json"
+keypair = "target/deploy/governance-keypair.json"  
+
 
 [scripts]
 test = "npx ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
